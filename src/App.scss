@@ -1,0 +1,157 @@
+*{
+    margin:0;
+    padding:0;
+}
+.container{
+    width:100%;
+    height:100vh;
+    padding:20px 0;
+    box-sizing: border-box;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.row{
+    display:flex;
+    justify-content: space-around;
+}
+
+.card{
+    transition:ease all .3s;
+    width:300px;
+}//card
+
+.warpper{
+    margin:60px 10px 10px;
+    padding-top:300px;
+    box-sizing: border-box;
+    position:relative;
+    box-shadow:0 0 20px 10px rgba(25,25,25,.1);
+    transition:ease all .3s;
+    &:hover{
+        transform:translateY(-10px);
+        .card_img{
+            height:350px;
+        }
+    }
+    .heart{
+        position:absolute;
+        top:20px;
+        right:20px;
+        z-index:1;
+        width:25px;
+        height:25px;
+        color:#fff;
+        svg,path,circle{
+            stroke:currentColor;
+            fill:transparent;
+        }
+        &:hover{
+            cursor:pointer;
+        }
+    }
+}//warpper
+
+.color_bg{
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:200px;
+    &.batman{
+        background-color:#b82d44;
+    }
+    &.blackpanter{
+        background-color:#1d1d1d;
+    }
+    &.arthur{
+        background-color:#153a82;
+    }
+    &.kashima{
+        background-color:#3f4a69;
+    }
+}
+
+.card_img{
+    background-size:contain;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    position:absolute;
+    bottom:calc(100% - 300px);
+    width:100%;
+    height:300px;
+    transition:ease all .3s;
+}
+.cardInfo{
+    display:block;
+    padding:20px 10px 5px 10px;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+    color:#666;
+    h1{
+        font-size:20px;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: bold;
+        line-height: 1.3;
+        margin-bottom:10px;
+    }
+    p{
+        width:100%;
+        font-size:14px;
+        text-align: center;
+    }
+}//cardInfo
+
+.action{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:15px;
+    box-sizing: border-box;
+    margin-top:15px;
+}//action
+
+.priceGroup{
+    display:flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    .price{
+        font-size:18px;
+        color:#000;
+        text-align: left;
+        &.old_price{
+            color:red;
+            font-size:15px;
+            text-decoration: line-through;
+            text-align: left;
+        }
+        &.newPrice{
+            color:#000;
+            font-size:25px;
+            font-weight: 800;
+        }
+    }
+}//priceGroup
+
+.cart{
+    display:flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    position:relative;
+    width:35px;
+    height:35px;
+    &:hover{
+        cursor:pointer;
+    }
+    svg,path,circle{
+        stroke: currentColor;
+        fill:transparent;
+        transition-delay: .2s;
+    }
+}//cart
